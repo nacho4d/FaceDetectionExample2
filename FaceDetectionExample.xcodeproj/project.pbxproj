@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F99C414151862030056B190 /* facedetectionpic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F99C413151862030056B190 /* facedetectionpic2.jpg */; };
+		5AB4CFF11461092C00316888 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB4CFF01461092C00316888 /* UIKit.framework */; };
+		5AB4CFF31461092C00316888 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB4CFF21461092C00316888 /* Foundation.framework */; };
+		5AB4CFF51461092C00316888 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB4CFF41461092C00316888 /* CoreGraphics.framework */; };
+		5AB4CFFB1461092C00316888 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4CFF91461092C00316888 /* InfoPlist.strings */; };
+		5AB4CFFD1461092C00316888 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4CFFC1461092C00316888 /* main.m */; };
+		5AB4D0011461092C00316888 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4D0001461092C00316888 /* AppDelegate.m */; };
+		5AB4D0041461092C00316888 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4D0031461092C00316888 /* ViewController.m */; };
+		5AB4D0071461092C00316888 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4D0051461092C00316888 /* ViewController.xib */; };
+		5AB4D00E14610A0600316888 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB4D00D14610A0600316888 /* QuartzCore.framework */; };
+		5AB4D01014610A0C00316888 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB4D00F14610A0C00316888 /* CoreImage.framework */; };
+		5AB4D01214610C3100316888 /* facedetectionpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4D01114610C3100316888 /* facedetectionpic.jpg */; };
+		9A192C161518E0300090FBC2 /* facedetectionpic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A192C151518E0300090FBC2 /* facedetectionpic3.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F99C413151862030056B190 /* facedetectionpic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facedetectionpic2.jpg; sourceTree = "<group>"; };
+		5AB4CFEC1461092C00316888 /* FaceDetectionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetectionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB4CFF01461092C00316888 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5AB4CFF21461092C00316888 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5AB4CFF41461092C00316888 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5AB4CFF81461092C00316888 /* FaceDetectionExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceDetectionExample-Info.plist"; sourceTree = "<group>"; };
+		5AB4CFFA1461092C00316888 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5AB4CFFC1461092C00316888 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AB4CFFE1461092C00316888 /* FaceDetectionExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceDetectionExample-Prefix.pch"; sourceTree = "<group>"; };
+		5AB4CFFF1461092C00316888 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AB4D0001461092C00316888 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AB4D0021461092C00316888 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5AB4D0031461092C00316888 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5AB4D0061461092C00316888 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5AB4D00D14610A0600316888 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5AB4D00F14610A0C00316888 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		5AB4D01114610C3100316888 /* facedetectionpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facedetectionpic.jpg; sourceTree = "<group>"; };
+		9A192C151518E0300090FBC2 /* facedetectionpic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facedetectionpic3.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AB4CFE91461092B00316888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB4D01014610A0C00316888 /* CoreImage.framework in Frameworks */,
+				5AB4D00E14610A0600316888 /* QuartzCore.framework in Frameworks */,
+				5AB4CFF11461092C00316888 /* UIKit.framework in Frameworks */,
+				5AB4CFF31461092C00316888 /* Foundation.framework in Frameworks */,
+				5AB4CFF51461092C00316888 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AB4CFE11461092B00316888 = {
+			isa = PBXGroup;
+			children = (
+				5AB4CFF61461092C00316888 /* FaceDetectionExample */,
+				5AB4CFEF1461092C00316888 /* Frameworks */,
+				5AB4CFED1461092C00316888 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AB4CFED1461092C00316888 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AB4CFEC1461092C00316888 /* FaceDetectionExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AB4CFEF1461092C00316888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AB4D00D14610A0600316888 /* QuartzCore.framework */,
+				5AB4D00F14610A0C00316888 /* CoreImage.framework */,
+				5AB4CFF01461092C00316888 /* UIKit.framework */,
+				5AB4CFF21461092C00316888 /* Foundation.framework */,
+				5AB4CFF41461092C00316888 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AB4CFF61461092C00316888 /* FaceDetectionExample */ = {
+			isa = PBXGroup;
+			children = (
+				5AB4D01114610C3100316888 /* facedetectionpic.jpg */,
+				4F99C413151862030056B190 /* facedetectionpic2.jpg */,
+				9A192C151518E0300090FBC2 /* facedetectionpic3.jpg */,
+				5AB4CFFF1461092C00316888 /* AppDelegate.h */,
+				5AB4D0001461092C00316888 /* AppDelegate.m */,
+				5AB4D0021461092C00316888 /* ViewController.h */,
+				5AB4D0031461092C00316888 /* ViewController.m */,
+				5AB4D0051461092C00316888 /* ViewController.xib */,
+				5AB4CFF71461092C00316888 /* Supporting Files */,
+			);
+			path = FaceDetectionExample;
+			sourceTree = "<group>";
+		};
+		5AB4CFF71461092C00316888 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AB4CFF81461092C00316888 /* FaceDetectionExample-Info.plist */,
+				5AB4CFF91461092C00316888 /* InfoPlist.strings */,
+				5AB4CFFC1461092C00316888 /* main.m */,
+				5AB4CFFE1461092C00316888 /* FaceDetectionExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AB4CFEB1461092B00316888 /* FaceDetectionExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB4D00A1461092C00316888 /* Build configuration list for PBXNativeTarget "FaceDetectionExample" */;
+			buildPhases = (
+				5AB4CFE81461092B00316888 /* Sources */,
+				5AB4CFE91461092B00316888 /* Frameworks */,
+				5AB4CFEA1461092B00316888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceDetectionExample;
+			productName = FaceDetectionExample;
+			productReference = 5AB4CFEC1461092C00316888 /* FaceDetectionExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AB4CFE31461092B00316888 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "JID Marketing";
+			};
+			buildConfigurationList = 5AB4CFE61461092B00316888 /* Build configuration list for PBXProject "FaceDetectionExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5AB4CFE11461092B00316888;
+			productRefGroup = 5AB4CFED1461092C00316888 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AB4CFEB1461092B00316888 /* FaceDetectionExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AB4CFEA1461092B00316888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB4CFFB1461092C00316888 /* InfoPlist.strings in Resources */,
+				5AB4D0071461092C00316888 /* ViewController.xib in Resources */,
+				5AB4D01214610C3100316888 /* facedetectionpic.jpg in Resources */,
+				4F99C414151862030056B190 /* facedetectionpic2.jpg in Resources */,
+				9A192C161518E0300090FBC2 /* facedetectionpic3.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AB4CFE81461092B00316888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB4CFFD1461092C00316888 /* main.m in Sources */,
+				5AB4D0011461092C00316888 /* AppDelegate.m in Sources */,
+				5AB4D0041461092C00316888 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5AB4CFF91461092C00316888 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AB4CFFA1461092C00316888 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5AB4D0051461092C00316888 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AB4D0061461092C00316888 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AB4D0081461092C00316888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5AB4D0091461092C00316888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AB4D00B1461092C00316888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceDetectionExample/FaceDetectionExample-Prefix.pch";
+				INFOPLIST_FILE = "FaceDetectionExample/FaceDetectionExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5AB4D00C1461092C00316888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FaceDetectionExample/FaceDetectionExample-Prefix.pch";
+				INFOPLIST_FILE = "FaceDetectionExample/FaceDetectionExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AB4CFE61461092B00316888 /* Build configuration list for PBXProject "FaceDetectionExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB4D0081461092C00316888 /* Debug */,
+				5AB4D0091461092C00316888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AB4D00A1461092C00316888 /* Build configuration list for PBXNativeTarget "FaceDetectionExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB4D00B1461092C00316888 /* Debug */,
+				5AB4D00C1461092C00316888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AB4CFE31461092B00316888 /* Project object */;
+}

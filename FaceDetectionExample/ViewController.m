@@ -35,6 +35,68 @@
 
 	// Do face detection
 	[self performSelector:@selector(detectFaces) withObject:nil afterDelay:0.0];
+
+	// Do other filters
+	[self performSelector:@selector(applyOtherFilters) withObject:nil afterDelay:0.0];
+}
+
+-(void)logAllFilters
+{
+	NSArray *properties = [CIFilter filterNamesInCategory:kCICategoryBuiltIn];
+	NSLog(@"%@", properties);
+	for (NSString *filterName in properties) {
+		CIFilter *fltr = [CIFilter filterWithName:filterName];
+		NSLog(@"%@", [fltr attributes]);
+	}
+}
+
+- (void)applyOtherFilters
+{
+	// Enable this for reference, Not all Filters MacOS filters are available in iOS (as of iOS5.1)
+	//[self logAllFilters];
+
+	// Input image recipe
+	CIImage *imageInput = [CIImage imageWithCGImage:[UIImage imageNamed:@"facedetectionpic.jpg"].CGImage];
+	CIImage *imageOutput = nil;
+
+	// Filter: Hue Adjust
+//	CIFilter *hueAdjustFilter = [CIFilter filterWithName:@"CIHueAdjust"];
+//	[hueAdjustFilter setDefaults]; // Docs say we should do this but in practice seems not needed any more
+//	[hueAdjustFilter setValue:imageInput forKey:kCIInputImageKey];
+//	[hueAdjustFilter setValue:[NSNumber numberWithFloat:2.094] forKey:@"inputAngle"];
+
+	// Filter: Sepia Tone
+	CIFilter *sepiaFilter = [CIFilter filterWithName:@"CISepiaTone"];
+	[sepiaFilter setValue:imageInput forKey:kCIInputImageKey];
+	[sepiaFilter setValue:[NSNumber numberWithFloat:0.8] forKey:@"inputIntensity"];
+	imageOutput = [sepiaFilter outputImage];
+
+	// Filter: Distortion (not available in iOS)
+//	CIFilter *bumpDistortionFilter = [CIFilter filterWithName:@"CIBumpDistortion"];
+//	[bumpDistortionFilter setDefaults]; // Docs say we should do this but in practice seems not needed any more
+//	[bumpDistortionFilter setValue:imageOutput forKey:kCIInputImageKey]; // This is how we pipe this filter after the previous one
+//	[bumpDistortionFilter setValue:[CIVector vectorWithX:200 Y:150] forKey:@"inputCenter"];
+//	[bumpDistortionFilter setValue:[NSNumber numberWithFloat:100] forKey:@"inputRadius"];
+//	[bumpDistortionFilter setValue:[NSNumber numberWithFloat:3.0] forKey:@"inputScale"];
+//	imageOutput = [bumpDistortionFilter outputImage];
+
+	// Filter: Color Invert
+	CIFilter *invertFilter = [CIFilter filterWithName:@"CIColorInvert"];
+	[invertFilter setDefaults]; // Docs say we should do this but in practice seems not needed any more
+	[invertFilter setValue:imageOutput forKey:kCIInputImageKey]; // This is how we pipe this filter after the previous one
+	imageOutput = [invertFilter outputImage];
+
+	// Create the context and instruct CoreImage to draw the output image recipe into a CGImage
+	CIContext *context = [CIContext contextWithOptions:nil];
+	CGImageRef cgimg = [context createCGImage:imageOutput fromRect:[imageOutput extent]];
+
+	// Draw the image in screen
+	UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:cgimg]];
+	CGRect f = imageView2.frame;
+	f.origin.y = CGRectGetMaxY(imageView.frame);
+	imageView2.frame = f;
+
+	[self.view addSubview:imageView2];
 }
 
 // Below rates defines the size of the eyes and mouth circles in relationship with the whole face size

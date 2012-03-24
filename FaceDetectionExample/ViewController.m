@@ -34,10 +34,11 @@
 	[self.view addSubview:imageView];
 
 	// Do face detection
-	[self performSelector:@selector(detectFaces) withObject:nil afterDelay:0.0];
+	//[self performSelector:@selector(detectFaces) withObject:nil afterDelay:0.0];
 
 	// Do other filters
 	[self performSelector:@selector(applyOtherFilters) withObject:nil afterDelay:0.0];
+	//[self performSelector:@selector(doCIColorMatrixFilter) withObject:nil afterDelay:0.0];
 }
 
 -(void)logAllFilters
@@ -48,6 +49,41 @@
 		CIFilter *fltr = [CIFilter filterWithName:filterName];
 		NSLog(@"%@", [fltr attributes]);
 	}
+}
+
+-(void)doCIColorMatrixFilter
+{
+
+	// Make the input image recipe
+	CIImage *inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"facedetectionpic.jpg"].CGImage];
+
+	// Make color matrix filter
+	// s.r = dot(s.r, inputRVector);
+	// s.g = dot(s.g, inputGVector);
+	// s.b = dot(s.b, inputBVector);
+	// s.a = dot(s.a, inputAVector);
+	CIFilter *colorMatrixFilter = [CIFilter filterWithName:@"CIColorMatrix"];
+	[colorMatrixFilter setDefaults];
+	[colorMatrixFilter setValue:inputImage forKey:kCIInputImageKey];
+	[colorMatrixFilter setValue:[CIVector vectorWithX:1 Y:1 Z:1 W:0] forKey:@"inputRVector"]; // custom, makes the image *reddish*
+	[colorMatrixFilter setValue:[CIVector vectorWithX:0 Y:1 Z:0 W:0] forKey:@"inputGVector"]; // default
+	[colorMatrixFilter setValue:[CIVector vectorWithX:0 Y:0 Z:1 W:0] forKey:@"inputBVector"]; // default
+	[colorMatrixFilter setValue:[CIVector vectorWithX:0 Y:0 Z:0 W:1] forKey:@"inputAVector"]; // default
+
+	// Get the output image recipe
+	CIImage *outputImage = [colorMatrixFilter outputImage];
+
+	// Create the context and instruct CoreImage to draw the output image recipe into a CGImage
+	CIContext *context = [CIContext contextWithOptions:nil];
+	CGImageRef cgimg = [context createCGImage:outputImage fromRect:[outputImage extent]];
+
+	// Draw the image in screen
+	UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:cgimg]];
+	CGRect f = imageView2.frame;
+	f.origin.y = CGRectGetMaxY(imageView.frame);
+	imageView2.frame = f;
+
+	[self.view addSubview:imageView2];
 }
 
 - (void)applyOtherFilters

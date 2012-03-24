@@ -37,11 +37,16 @@
 	//[self performSelector:@selector(detectFaces) withObject:nil afterDelay:0.0];
 
 	// Do other filters
-	[self performSelector:@selector(applyOtherFilters) withObject:nil afterDelay:0.0];
+	//[self performSelector:@selector(applyOtherFilters) withObject:nil afterDelay:0.0];
+
+	// Do color matrix filter
 	//[self performSelector:@selector(doCIColorMatrixFilter) withObject:nil afterDelay:0.0];
+
+	// Do tone curve filter
+	[self performSelector:@selector(doCIToneCurveFilter) withObject:nil afterDelay:0.0];
 }
 
--(void)logAllFilters
+- (void)logAllFilters
 {
 	NSArray *properties = [CIFilter filterNamesInCategory:kCICategoryBuiltIn];
 	NSLog(@"%@", properties);
@@ -51,7 +56,46 @@
 	}
 }
 
--(void)doCIColorMatrixFilter
+- (void)doCIToneCurveFilter
+{
+	// Set an appropiate image. Better a dark one so we see the results clearer
+	// This image is being taken from http://photo.tutsplus.com/tutorials/post-processing/adobe-camera-raw-for-beginners-tone-curve/
+	imageView.image = [UIImage imageNamed:@"turtles"];
+	imageView.frame = CGRectMake(0, 0, imageView.image.size.width*0.7, imageView.image.size.height*0.7);
+
+	// Make the input image recipe
+	CIImage *inputImage = [CIImage imageWithCGImage:imageView.image.CGImage];
+
+	// Make tone filter filter
+	// See mentioned link for visual reference
+	CIFilter *toneCurveFilter = [CIFilter filterWithName:@"CIToneCurve"];
+	[toneCurveFilter setDefaults];
+	[toneCurveFilter setValue:inputImage forKey:kCIInputImageKey];
+	[toneCurveFilter setValue:[CIVector vectorWithX:0.0  Y:0.0] forKey:@"inputPoint0"]; // default
+	[toneCurveFilter setValue:[CIVector vectorWithX:0.27 Y:0.26] forKey:@"inputPoint1"]; // 1
+	[toneCurveFilter setValue:[CIVector vectorWithX:0.5  Y:0.80] forKey:@"inputPoint2"]; // 2
+	[toneCurveFilter setValue:[CIVector vectorWithX:0.7  Y:1.0] forKey:@"inputPoint3"]; // 3
+	[toneCurveFilter setValue:[CIVector vectorWithX:1.0  Y:1.0] forKey:@"inputPoint4"]; // default
+
+	// Get the output image recipe
+	CIImage *outputImage = [toneCurveFilter outputImage];
+
+	// Create the context and instruct CoreImage to draw the output image recipe into a CGImage
+	CIContext *context = [CIContext contextWithOptions:nil];
+	CGImageRef cgimg = [context createCGImage:outputImage fromRect:[outputImage extent]];
+
+	// Draw the image in screen
+	UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageWithCGImage:cgimg]];
+	CGRect f = imageView2.frame;
+	f.origin.y = CGRectGetMaxY(imageView.frame);
+	f.size.width = imageView.frame.size.width;
+	f.size.height = imageView.frame.size.height;
+	imageView2.frame = f;
+
+	[self.view addSubview:imageView2];
+}
+
+- (void)doCIColorMatrixFilter
 {
 
 	// Make the input image recipe

@@ -20,6 +20,7 @@
 		5AB4D01014610A0C00316888 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB4D00F14610A0C00316888 /* CoreImage.framework */; };
 		5AB4D01214610C3100316888 /* facedetectionpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AB4D01114610C3100316888 /* facedetectionpic.jpg */; };
 		9A192C161518E0300090FBC2 /* facedetectionpic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A192C151518E0300090FBC2 /* facedetectionpic3.jpg */; };
+		9AE890F2151E5649005D7A5B /* turtles.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE890F1151E5649005D7A5B /* turtles.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5AB4D00F14610A0C00316888 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		5AB4D01114610C3100316888 /* facedetectionpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facedetectionpic.jpg; sourceTree = "<group>"; };
 		9A192C151518E0300090FBC2 /* facedetectionpic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facedetectionpic3.jpg; sourceTree = "<group>"; };
+		9AE890F1151E5649005D7A5B /* turtles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtles.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				5AB4D01114610C3100316888 /* facedetectionpic.jpg */,
 				4F99C413151862030056B190 /* facedetectionpic2.jpg */,
 				9A192C151518E0300090FBC2 /* facedetectionpic3.jpg */,
+				9AE890F1151E5649005D7A5B /* turtles.png */,
 				5AB4CFFF1461092C00316888 /* AppDelegate.h */,
 				5AB4D0001461092C00316888 /* AppDelegate.m */,
 				5AB4D0021461092C00316888 /* ViewController.h */,
@@ -171,6 +174,7 @@
 				5AB4D01214610C3100316888 /* facedetectionpic.jpg in Resources */,
 				4F99C414151862030056B190 /* facedetectionpic2.jpg in Resources */,
 				9A192C161518E0300090FBC2 /* facedetectionpic3.jpg in Resources */,
+				9AE890F2151E5649005D7A5B /* turtles.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
